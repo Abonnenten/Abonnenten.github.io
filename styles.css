@@ -1,0 +1,70 @@
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+}
+
+body {
+  background: #f1f1f1;
+  font-family: "Inter", sans-serif;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  text-decoration: none;
+}
+
+.navmenu {
+  position: fixed;
+  top: 33%;
+  transform: translateY(-50%);
+}
+
+.navmenu ul {
+  padding-left: 32px;
+  position: relative;
+}
+
+.navmenu ul::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: calc(100% - 8px);
+  left: 32px;
+  top: 0;
+  z-index: -1;
+  background: #363636;
+  margin-top: 8px;
+}
+
+.navmenu ul li {
+  padding: 32px 0;
+  padding-left: 24px;
+}
+
+.navmenu ul li a {
+  text-decoration: none;
+  position: relative;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 0;
+}
+
+.navmenu ul li a.active {
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 250ms;
+}
+
+.navmenu ul li a:active {
+  color: green;
+}
+
+.navmenu ul li a:visited {
+  color: #363636;
+}
