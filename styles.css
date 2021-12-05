@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap");
 
+html {
+  scroll-behavior: smooth;
+}
+
 h1 {
   font-family: IBM Plex Sans;
   font-style: normal;
@@ -16,11 +20,28 @@ h1 {
 h3 {
   font-family: IBM Plex Mono;
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 18px;
   line-height: 145%;
   letter-spacing: 0.6em;
   color: #b81e83;
+}
+
+h4 {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 156%;
+}
+
+h5 {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 145%;
+  letter-spacing: 0.3em;
 }
 body {
   background: #fff;
@@ -30,20 +51,68 @@ body {
   column-gap: 24px;
 }
 
+a {
+  text-decoration: none;
+  color: #141414;
+}
+
+a:visited {
+  color: #141414;
+}
+p {
+  font-family: IBM Plex Sans;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 156%;
+}
+
 img {
   width: 100%;
 }
+.about-img {
+  /* margin-left: 45px; */
+}
 
-.about-container {
+.about-paragraph {
+  padding: 32px 0px;
+}
+
+.main-container {
   grid-column: 3 / -3;
   display: flex;
-  flex: row;
+  flex-direction: column;
+  gap: 64px;
+  padding: 64px 0px 46px 0px;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: row;
   gap: 64px;
 }
 
 .about-name {
   display: flex;
   flex-direction: column;
+  gap: 16px;
+}
+
+.about-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.work-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.misc-container {
+  display: flex;
   gap: 24px;
 }
 
@@ -66,6 +135,10 @@ img {
   background-color: #141414;
   height: 1024px;
   grid-column: 1 / -1;
+}
+
+.footer {
+  display: grid;
 }
 
 .column {
@@ -113,7 +186,9 @@ ul {
   position: fixed;
   top: 33%;
   transform: translateY(-50%);
-  z-index: -1;
+  z-index: 1;
+  filter: invert(1);
+  mix-blend-mode: exclusion;
 }
 
 .navmenu ul {
@@ -143,7 +218,9 @@ ul {
   color: #141414;
   position: relative;
   font-size: 10px;
+  font-weight: 700;
   line-height: 1rem;
+  letter-spacing: 0.2rem;
 }
 
 .navmenu ul li a.active {
@@ -157,7 +234,7 @@ ul {
 }
 
 .navmenu ul li a:active {
-  color: #141414;
+  color: #b81e83;
   text-decoration: none;
 }
 
